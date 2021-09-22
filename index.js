@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const EC = require('elliptic').ec;
 const { program } = require('commander');
 

@@ -7,6 +7,10 @@ Verify an elliptic validation with DER format.
 git clone git@github.com:gilles-hemmerle/elliptic-signature-validation.git
 npm i
 node index.js --help
+
+# If you want to make your file executable on unix environment
+chmod +x index.js
+./index.js --help
 ```
  
  # Useage example
