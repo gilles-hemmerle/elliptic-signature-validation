@@ -20,10 +20,16 @@ verifySignature = (publicKey, signature, messageHash) => {
     return key.verify(messageHash, signature);
 }
 
-if (verifySignature(publicKey, signature, messageHash)) {
-    console.log("Signature is correct");
-    process.exit(0);
-} else {
-    console.log("Signature is incorrect");
-    process.exit(1);
+
+try {
+    if (verifySignature(publicKey, signature, messageHash)) {
+        console.log("Signature is correct");
+        process.exit(0);
+    } else {
+        console.log("Signature is incorrect");
+        process.exit(1);
+    }
+} catch (err) {
+    console.log("Invalid signature");
+    process.exit(2);
 }
